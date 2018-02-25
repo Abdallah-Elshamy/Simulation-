@@ -263,12 +263,10 @@ def avg(List):
 def robots(robotType,room, speed, num):
     """
     returns a list of robots
-    27 > num > 0
     """
-    names = 'abcdefghijklmnopqrustvwxyz'
     robots = {}
     for i in range(num):
-       robots[names[i]] = robotType(room, speed)
+       robots[i] = robotType(room, speed)
        i += 1
     return robots
         
@@ -282,7 +280,7 @@ def runSimulation(num_robots, speed, width, height, min_coverage, num_trials,
     The simulation is run with NUM_ROBOTS robots of type ROBOT_TYPE, each with
     speed SPEED, in a room of dimensions WIDTH x HEIGHT.
 
-    num_robots: an int (27 > num_robots > 0)
+    num_robots: an int (num_robots > 0)
     speed: a float (speed > 0)
     width: an int (width > 0)
     height: an int (height > 0)
